@@ -1,18 +1,18 @@
 /** Find Middle Number of Three Numbers **/
-var num1 = prompt("Middle Number Finder - Enter a number:");
-var num2 = prompt("Middle Number Finder - Middle Number Finder - Enter another number:");
-var num3 = prompt("Middle Number Finder - Enter one last number:");
-if ((num1 < num2 && num2 <  num3) || (num3 < num2 && num2 < num1)) {
-	var middleNum = num2;
+var a = prompt("Middle Number Finder - Enter a number:");
+var b = prompt("Middle Number Finder - Middle Number Finder - Enter another number:");
+var c = prompt("Middle Number Finder - Enter one last number:");
+if ((a > b && a < c) || (a > c && a < b)) {
+  return a; // 'a' is the middle number
 }
-else if ((num2 < num1 && num1 < num3) || (num3 < num1 && num1 < num2)) {
-	var middleNum = num1;
+else if ((b > a && b < c) || (b > c && b < a)) {
+  return b; // 'b' is the middle number
 }
 else {
-	var middleNum = num3;
+  return c; // 'c' is the middle number
 }
 
-document.getElementById("middleNumber").innerHTML = "The middle number of (" + num1 + "," + num2 + "," + num3 + ") is: ";
+document.getElementById("middleNumber").innerHTML = "The middle number of (" + a + "," + b + "," + c + ") is: ";
 document.getElementById("middleNumberResult").innerHTML = middleNum;
 
 /** Letter Grade Calculator **/
